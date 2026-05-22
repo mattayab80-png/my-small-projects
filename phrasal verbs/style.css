@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+.search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    font-size: 1em;
+}
+.search::placeholder {
+    color: #b0b0b0;
+}
+.search:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+ 
+    background: rgba(26, 26, 46, 0.9);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #0f3460;
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    color: #0f3460;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.dashboard {
+    background: linear-gradient(to bottom, rgba(21, 128, 171, 0.122), rgba(27, 6, 131, 0.368));
+    padding: 20px;
+    color: white;
+    
+}
+
+.dashboard ul {
+    list-style: none;
+}
+
+.dashboard li {
+    padding: 15px 0;
+    border-bottom: 1px solid #34495e;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dashboard li:hover {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.122), rgba(254, 253, 253, 0));
+}
+
+.body {
+    background: #16213e;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.body h3 {
+    font-size: 2em;
+    color: #0f3460;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.body p {
+    margin: 10px;
+    font-size: 1.2em;
+    color: #b0b0b0;
+    line-height: 1.8;
+}
+.body .italic{
+    border-top: 1px solid rgb(10, 94, 123);
+    font-style: italic;
+    color: rgb(9, 119, 143);
+}
+
+.examples-container {
+    margin-top: 20px;
+}
+
+.examples-container p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #b0b0b0;
+    line-height: 1.8;
+}
+
+.examples-container p:first-child {
+    font-weight: bold;
+    color: #0f3460;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
