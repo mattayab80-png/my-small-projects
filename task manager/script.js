@@ -7,6 +7,8 @@ document.addEventListener('mousemove', (e) =>{
 const inputTask = document.getElementById('input-task');
 const tasksList = document.getElementById('task-lists');
 const taskBtn = document.getElementById('addTask');
+const completedTasksList = document.getElementById('task-lists-completed');
+const showCompletedBtn = document.getElementById('showCompleted');
 
 // State
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -85,6 +87,35 @@ function toggleTask(id) {
   saveTasks();
   renderTasks();
 }
+
+function showCompletedTasks() {
+  const completedTasks = tasks.filter(task => task.completed);
+  completedTasksList.innerHTML = completedTasks
+    .map(
+      (task) => `
+      <li class="task-list-completed" data-id="${task.id}">
+        <span class="list-container ${task.completed ? "done" : ""}">
+          ${task.text}
+        </span>
+      </li>
+    `
+    )
+    .join('');
+   
+    
+   if ( completedTasksList.classList.toggle('active')){
+     tasksList.classList.remove('active');
+     completedTasksList.classList.add('active');
+     showCompletedBtn.textContent = 'Show Tasks';
+  }
+  else {
+    tasksList.classList.add('active');
+     completedTasksList.classList.remove('active');
+     showCompletedBtn.textContent = 'Show Completed';
+   }
+   
+}
+showCompletedBtn.addEventListener('click', showCompletedTasks);
 
 // Events
 taskBtn.addEventListener('click', addTask);
