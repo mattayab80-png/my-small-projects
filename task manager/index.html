@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task manager</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+</head>
+<body>
+      <header>
+            <div>
+                  <h1 class="text">Task Manager</h1>
+            </div>
+            <div class="cursor"></div>
+      </header>
+      <main>
+            <div class="main-header">
+                  <input type="text" placeholder="Add  a task" id="input-task">
+                  <button class="addTask-btn" id="addTask">Add task</button>
+                  <!-- <select name="Filter" id="filter-options">
+                        <option value="low">Low priority</option>
+                         <option value="medium">Medium priority</option>
+                          <option value="High">High priority</option>
+                  </select>
+                  <select name="Task activity" id="filter-task">
+                        <option value="active">Active</option>
+                        <option value="completed">Completed</option>
+                  </select> -->
+            </div>
+            <div class="tasks">
+                  <ul class="task-lists" id = "task-lists">
+                        <!--The tasks will be stored here-->
+                  </ul>
+            </div>
+      </main>
+</body>
+</html>
